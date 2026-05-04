@@ -2,7 +2,7 @@ name: Deployement Exercise 2
 on: push
 jobs:
   lint: 
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Get Code
         user: action/checkout@v3
@@ -11,7 +11,7 @@ jobs:
       - name: lint
         run: npm run lint
   test:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Get Code
         user: action/checkout@v3
@@ -20,7 +20,7 @@ jobs:
       - name: Test Code
         run: npm run test
   deploy:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Get Code
         user: action/checkout@v3
